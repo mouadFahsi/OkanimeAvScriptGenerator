@@ -29,6 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node7");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node8");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node2", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,6 +64,7 @@
             this.btSub = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btRemove = new System.Windows.Forms.Button();
+            this.EpisodesTree = new System.Windows.Forms.TreeView();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
@@ -91,7 +107,7 @@
             this.pictureBox1.Image = global::OkanimeAvScriptGenerator.Properties.Resources.okanimelogo;
             this.pictureBox1.Location = new System.Drawing.Point(17, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(88, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -274,15 +290,52 @@
             this.btRemove.Text = "Remove";
             this.btRemove.UseVisualStyleBackColor = false;
             // 
+            // EpisodesTree
+            // 
+            this.EpisodesTree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.EpisodesTree.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EpisodesTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EpisodesTree.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EpisodesTree.ForeColor = System.Drawing.Color.White;
+            this.EpisodesTree.Location = new System.Drawing.Point(0, 97);
+            this.EpisodesTree.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.EpisodesTree.Name = "EpisodesTree";
+            treeNode1.Name = "Node3";
+            treeNode1.Text = "Node3";
+            treeNode2.Name = "Node4";
+            treeNode2.Text = "Node4";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "Node0";
+            treeNode4.Name = "Node5";
+            treeNode4.Text = "Node5";
+            treeNode5.Name = "Node6";
+            treeNode5.Text = "Node6";
+            treeNode6.Name = "Node1";
+            treeNode6.Text = "Node1";
+            treeNode7.Name = "Node7";
+            treeNode7.Text = "Node7";
+            treeNode8.Name = "Node8";
+            treeNode8.Text = "Node8";
+            treeNode9.Name = "Node2";
+            treeNode9.Text = "Node2";
+            this.EpisodesTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode6,
+            treeNode9});
+            this.EpisodesTree.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EpisodesTree.Size = new System.Drawing.Size(728, 415);
+            this.EpisodesTree.TabIndex = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(968, 512);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.EpisodesTree);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
@@ -318,6 +371,7 @@
         private System.Windows.Forms.Button btSub;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btRemove;
+        private System.Windows.Forms.TreeView EpisodesTree;
     }
 }
 

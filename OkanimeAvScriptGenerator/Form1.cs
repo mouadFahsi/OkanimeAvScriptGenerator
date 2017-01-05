@@ -15,7 +15,6 @@ namespace OkanimeAvScriptGenerator
         public MainForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
